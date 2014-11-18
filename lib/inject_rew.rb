@@ -1,42 +1,14 @@
-class MyClass < Array
+class  Array
 
-  def yield_test
+  def inject_test(arg=nil)
 
-    @result = MyClass.new
+    if arg.nil?
+      @result = self.first
+      self[1..-1].each { |n| @result = yield(@result,n) }
 
-    self.each do |n|
-
-       @result  << yield(n)
-
-    end
-
-    @result
-
-  end
-
-  def block_test(&block)
-
-    @result = MyClass.new
-
-    self.each do |n|
-      @result  << block.call(n)
-    end
-
-    @result
-  end
-
-  def inject_test(arg=0)
-
-    @result = arg
-
-    if block_given?
-
-      self.each do |n|
-
-         @result = yield(@result,n)
-
-      end
-
+    else
+      @result = arg
+      self.each { |n| @result = yield(@result,n) }
     end
 
     @result
