@@ -1,5 +1,12 @@
+My inject method
+=====
+<div>
+<img src = https://img.shields.io/badge/%20-GitHub-orange.svg>
+<img src = https://img.shields.io/badge/%20-Ruby-blue.svg>
+<img src = https://img.shields.io/badge/%20-RSpec-red.svg>
+</div>
+<br>
 
+<h5> Second week Challenge at [Makers Academy](http://www.makersacademy.com)
 
-    Reopen the Array class or subclass it.
-    Rewrite the inject method. Write a test for it first. Don't worry about returning an enumerator,
-    assume a block is always given
+Rewrite the ruby inject method, keep the functionality. Simple!
